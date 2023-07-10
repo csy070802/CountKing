@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align:center">
+        <h1>count</h1>
+        <h2>0</h2>
+        <button class="plus">+1</button>
+        <button class="nice">-1</button>
+        <button class="reset">reset</button>
+    </div>
+</body>
+<script>
+    function plus_cliked(){
+        cnt = document.querySelector("h2").innerText
+        cnt=parseInt(cnt)
+        cnt+=1
+        document.querySelector("h2").innerText=cnt
+    }
+    document.querySelector(".plus").addEventListener("click",plus_cliked)
+    function nice_clicked(){
+        cnt = document.querySelector("h2").innerText
+        cnt = parseInt(cnt)
+        cnt-=1
+        document.querySelector("h2").innerText=cnt
+    }
+    document.querySelector(".nice").addEventListener("click",nice_clicked)
+    function reset_clicked(){
+        cnt = document.querySelector("h2").innerText
+        cnt = 0
+        document.querySelector("h2").innerText=cnt
+    }
+    document.querySelector(".reset").addEventListener("click",reset_clicked)
+</script>
+</html>
